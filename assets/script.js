@@ -53,21 +53,17 @@ $(".timeBlock").each(function () {
         $(this).addClass("past");
         $(this).removeClass("present");
         $(this).removeClass("future");
-    }
-
-    //If the hour has already passed in comparison to current time, then addClass "PRESENT"
-    else {
+    } else {
+        //If the hour has already passed in comparison to current time, then addClass "PRESENT"
         if (storedTime === currentTime) {
             $(this).addClass("present");
             $(this).removeClass("past");
             $(this).removeClass("future");
-        }
-        
-        //If the hour has already passed in comparison to current time, then addClass "FUTURE"
-        else {
+        } else {
+            //If the hour has already passed in comparison to current time, then addClass "FUTURE"
             $(this).addClass("future");
             $(this).removeClass("past");
             $(this).removeClass("present");
-
         }
-    })
+    }
+});
