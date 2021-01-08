@@ -1,7 +1,7 @@
 // Sets the date on the scheduler as today's date
-$("#currentDay").text(moment().format("MMMM Do YYYY"));
+$("#currentDay").text(moment().format("Do MMMM YYYY"));
 
-//Fucntion to retrieve stored data from local server
+//Function to retrieve stored data from local server
 function getAll() {
     $("#9 .toDo").val(localStorage.getItem("9"));
     $("#10 .toDo").val(localStorage.getItem("10"));
@@ -39,3 +39,35 @@ $(".saveBtn").click(function (event) {
 
 });
 
+//Variable to monitor current time (hour)
+var currentTime = moment().hour();
+
+//Function to change color of each of the rows
+$(".timeBlock").each(function () {
+
+    //Reach the row's ID to retrieve row's relative time
+    var storedTime = parseInt($(this).attr("id"));
+
+    //If the hour has already passed in comparison to current time, then addClass "PAST"
+    if (storedTime < currentTime) {
+        $(this).addClass("past");
+        $(this).removeClass("present");
+        $(this).removeClass("future");
+    }
+
+    //If the hour has already passed in comparison to current time, then addClass "PRESENT"
+    else {
+        if (storedTime === currentTime) {
+            $(this).addClass("present");
+            $(this).removeClass("past");
+            $(this).removeClass("future");
+        }
+        
+        //If the hour has already passed in comparison to current time, then addClass "FUTURE"
+        else {
+            $(this).addClass("future");
+            $(this).removeClass("past");
+            $(this).removeClass("present");
+
+        }
+    })
