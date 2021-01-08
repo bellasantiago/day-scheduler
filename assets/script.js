@@ -36,7 +36,6 @@ $(".saveBtn").click(function (event) {
 
     //Store "Task" and "Time" in the local storage
     localStorage.setItem(time, task);
-
 });
 
 //Variable to monitor current time (hour)
