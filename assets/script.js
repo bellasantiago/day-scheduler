@@ -47,14 +47,16 @@ $(".timeBlock").each(function () {
     //Reach the row's ID to retrieve row's relative time
     var storedTime = parseInt($(this).attr("id"));
 
+    console.log(storedTime , currentTime);
+
     //If the hour has already passed in comparison to current time, then addClass "PAST"
     if (storedTime < currentTime) {
         $(this).addClass("past");
         $(this).removeClass("present");
         $(this).removeClass("future");
     } else {
-        //If the hour has already passed in comparison to current time, then addClass "PRESENT"
         if (storedTime === currentTime) {
+            //If the hour has already passed in comparison to current time, then addClass "PRESENT"
             $(this).addClass("present");
             $(this).removeClass("past");
             $(this).removeClass("future");
