@@ -7,11 +7,11 @@ function getAll() {
     $("#10 .toDo").val(localStorage.getItem("10"));
     $("#11 .toDo").val(localStorage.getItem("11"));
     $("#12 .toDo").val(localStorage.getItem("12"));
-    $("#1 .toDo").val(localStorage.getItem("1"));
-    $("#2 .toDo").val(localStorage.getItem("2"));
-    $("#3 .toDo").val(localStorage.getItem("3"));
-    $("#4 .toDo").val(localStorage.getItem("4"));
-    $("#5 .toDo").val(localStorage.getItem("5"));
+    $("#1 .toDo").val(localStorage.getItem("13"));
+    $("#2 .toDo").val(localStorage.getItem("14"));
+    $("#3 .toDo").val(localStorage.getItem("15"));
+    $("#4 .toDo").val(localStorage.getItem("16"));
+    $("#5 .toDo").val(localStorage.getItem("17"));
 };
 
 //Call retrieve the getAll function 
